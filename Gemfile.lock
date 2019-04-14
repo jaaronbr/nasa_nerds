@@ -91,6 +91,8 @@ GEM
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
+    figaro (1.1.1)
+      thor (~> 0.14)
     foundation-rails (6.5.3.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0)
@@ -263,6 +265,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   faraday
+  figaro
   foundation-rails
   jbuilder (~> 2.5)
   launchy
