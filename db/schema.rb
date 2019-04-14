@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_04_14_192149) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "nasa_pics", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_04_14_192149) do
     t.string "date_taken"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_nasa_pics_on_user_id"
   end
 
@@ -32,4 +35,5 @@ ActiveRecord::Schema.define(version: 2019_04_14_192149) do
     t.string "confirmation"
   end
 
+  add_foreign_key "nasa_pics", "users"
 end
