@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.4.5
+
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database nasa_nerds_test;' -U postgres
+
+deploy:
+  provider: heroku
+  app: nasa-nerds-app
+  run: "rake db:migrate"
+  api_key:
+    secure: co9KXj8GfYrF8VHAbjc0p4P9ztqjYy8q9LW9xJJD
