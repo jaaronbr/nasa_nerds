@@ -31,7 +31,7 @@ We need to run Figaro to create a hidden .yml file to store our API keys locally
 $ bundle exec figaro install
 ```
 
-## Within config/application.yml, add the following Environment Variable keys:
+*Within config/application.yml, add the following Environment Variable keys:*
 
 ### Nasa's API
 * Request Token @:
@@ -43,7 +43,7 @@ $ bundle exec figaro install
 
 This app is deployed on heroku at:
 
-*
+* [https://nasa-nerds-app.herokuapp.com/](https://nasa-nerds-app.herokuapp.com/)
 
 ## Technologies
 
