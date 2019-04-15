@@ -3,13 +3,16 @@ require 'date'
 class NasaService
 
   def daily_apod
+    today = time_format
     # astronomy picture of the day a.p.o.d.
-    get_json("/planetary/apod?api_key=#{ENV["NASA_API_KEY"]}&date=2019-04-14&hd=bool")
+    get_json("/planetary/apod?api_key=#{ENV["NASA_API_KEY"]}&date=#{today}&hd=bool")
   end
 
   def nasa_notifications
+    today = time_format
+    last_month = last_thirty
     #  Space Weather Database Of Notifications, Knowledge, Information
-    query = get_json("/DONKI/notifications?startDate=2019-04-01&endDate=2019-04-14&api_key=#{ENV["NASA_API_KEY"]}&type=report")
+    query = get_json("/DONKI/notifications?startDate=#{last_month}&endDate=#{today}&api_key=#{ENV["NASA_API_KEY"]}&type=report")
     query[0]
   end
 
