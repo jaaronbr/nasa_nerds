@@ -43,7 +43,7 @@ $ bundle exec figaro install
 
 This app is deployed on heroku at:
 
-* 
+*
 
 ## Technologies
 
@@ -60,3 +60,7 @@ This app is deployed on heroku at:
 * Me   [https://github.com/jaaronbr](https://github.com/jaaronbr)
 
 ### Paths
+
+### Schema
+
+![image](https://user-images.githubusercontent.com/40776966/56101800-e0e26a80-5ee4-11e9-8038-79b7ff0d1f94.png)
