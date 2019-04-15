@@ -16,6 +16,11 @@ class NasaService
     query[0]
   end
 
+  def rover_photos
+    query = get_json("/mars-photos/api/v1/rovers/curiosity/photos?sol=1&api_key=#{ENV["NASA_API_KEY"]}")
+    query[:photos].first
+  end
+
   private
 
   def time_format

@@ -37,6 +37,24 @@ describe "Nasa Service Model" do
         end
       end
     end
+
+    context '#rover_photos' do
+      it 'returns info from mars rovers' do
+        VCR.use_cassette("rover_photos") do
+          rover = NasaService.new.rover_photos
+
+          expect(rover).to be_a(Hash)
+          expect(rover[:camera]).to have_key(:name)
+          expect(rover[:camera]).to have_key(:rover_id)
+          expect(rover[:camera]).to have_key(:full_name)
+          expect(rover[:img_src]).to be_a(String)
+          expect(rover[:rover]).to have_key(:name)
+          expect(rover[:rover]).to have_key(:landing_date)
+          expect(rover[:rover]).to have_key(:launch_date)
+          expect(rover[:rover]).to have_key(:total_photos)
+        end
+      end
+    end
   end
 
 end
