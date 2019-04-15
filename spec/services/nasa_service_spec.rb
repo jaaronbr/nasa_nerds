@@ -9,7 +9,7 @@ describe "Nasa Service Model" do
 
   context 'instance methods' do
     context '#daily_apod' do
-      it 'returns info from pic of the day' do
+      xit 'returns info from pic of the day' do
         VCR.use_cassette("nasa_apod_service") do
           nasa = NasaService.new.daily_apod
 
@@ -24,7 +24,7 @@ describe "Nasa Service Model" do
     end
 
     context '#nasa_notifications' do
-      it 'returns info from pic of the day' do
+      xit 'returns info from pic of the day' do
         VCR.use_cassette("nasa_notifications") do
           notification = NasaService.new.nasa_notifications
 
@@ -34,6 +34,24 @@ describe "Nasa Service Model" do
           expect(notification).to have_key(:messageURL)
           expect(notification).to have_key(:messageIssueTime)
           expect(notification).to have_key(:messageBody)
+        end
+      end
+    end
+
+    context '#rover_photos' do
+      xit 'returns info from mars rovers' do
+        VCR.use_cassette("rover_photos") do
+          rover = NasaService.new.rover_photos
+
+          expect(rover).to be_a(Hash)
+          expect(rover[:camera]).to have_key(:name)
+          expect(rover[:camera]).to have_key(:rover_id)
+          expect(rover[:camera]).to have_key(:full_name)
+          expect(rover[:img_src]).to be_a(String)
+          expect(rover[:rover]).to have_key(:name)
+          expect(rover[:rover]).to have_key(:landing_date)
+          expect(rover[:rover]).to have_key(:launch_date)
+          expect(rover[:rover]).to have_key(:total_photos)
         end
       end
     end
