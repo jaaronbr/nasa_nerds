@@ -9,15 +9,7 @@ you can save your favorite images of the day from Nasa's database.
 Clone down the repo
 ```
 $ git clone git@github.com:jaaronbr/nasa_nerds.git
-```
-
-Install the gem packages
-```
 $ bundle
-```
-
-Set up the database
-```
 $ rake db:{create,migrate,seed}
 ```
 
@@ -36,7 +28,7 @@ $ bundle exec figaro install
 *Within config/application.yml, add the following Environment Variable keys:*
 
 ### Nasa's API
-* Request Token @:
+* Request Key @:
 [https://api.nasa.gov/index.html#getting-started](https://api.nasa.gov/index.html#getting-started)
 
 * NASA_API_KEY: `your api key from nasa`
