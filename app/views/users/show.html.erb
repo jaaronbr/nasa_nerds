@@ -1,0 +1,13 @@
+<html>
+  <body class="user-show">
+    <h1>Hello <%= @user.first_name %></h1>
+    <h2>Here Are Your Saved Pictures</h2>
+    <% @current_pics.each do |picture| %>
+      Title: <%= picture.title %>
+      <img src="<%= picture.image %>" alt="Nasa_Pic" height="200" width="200">
+      Description: <%= picture.description %>
+      Date Taken: <%= picture.date_taken %>
+      Date Saved: <%= picture.created_at %>
+    <% end %>
+  </body>
+</html>
