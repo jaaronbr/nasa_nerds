@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
 
   def index
     service = NasaService.new
-    @nasa_pic = service.daily_apod[:url]
+    @nasa_pic = service.daily_apod
     @nasa_p_title = service.daily_apod[:title]
     @nasa_p_date = service.daily_apod[:date]
     @nasa_p_explanation = service.daily_apod[:explanation]
