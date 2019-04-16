@@ -2,6 +2,8 @@
 This is an application to get information about Nasa exploits and as a user,
 you can save your favorite images of the day from Nasa's database.
 
+![image](https://user-images.githubusercontent.com/40776966/56242173-e2cb3b80-6054-11e9-8736-430c6f8a92ca.png)
+
 ## Local Setup
 
 Clone down the repo
