@@ -13,6 +13,8 @@ SimpleCov.start do
   add_filter "app/helpers/application_helper.rb"
   add_filter "app/jobs/application_job.rb"
   add_filter "app/mailers/application_mailer.rb"
+  add_filter "app/controllers/application_controller.rb"
+  add_filter "app/models/application_record.rb"
 end
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
