@@ -1,27 +1,41 @@
-<div class="root-page-title">
-  <h1>Welcome to Nasa Nerds</h1>
-  <h3>Sit back and explore...</h3>
-</div>
-<div class="nasa-picot-day">
-  <h3>Nasa Pic Of The Day</h3>
-  <h4>Title: <%= @nasa_p_title %></h4>
-  <img src="<%= @nasa_pic %>" alt="Nasa_Pic" height="200" width="200">
-  <h4>Date: <%= @nasa_p_date %></h4>
-  <h4>Description: <%= @nasa_p_explanation %></h4>
-</div>
+<html>
+  <body class="root-page-title">
+    <h1>Welcome to Nasa Nerds</h1>
+    <h2>Sit back and explore...</h2>
 
-<div class="current-notification">
-  <h3>Recent Notifications</h3>
-  <h4>Message Type: <%= @nasa_messg_type %> </h4>
-  <h4>Message ID: <%= @nasa_messg_id %></h4>
-  <h4>Message Issue Time: <%= @nasa_messg_time %></h4>
-  <h4>Notification: <%= @nasa_messg %></h4>
-  Click <a href="<%= @nasa_messg_url %>">Here</a> for more info
-</div>
+      <div class="ui divider"></div>
+      <br>
 
-<div class="rover-footage">
-  <h3>Rover Footage</h3>
-  <h4>Earth Date: <%= @rover_info[:earth_date] %></h4>
-  <h4>Rover Name: <%= @rover_info[:rover][:name] %></h4>
-  <img src="<%= @rover_info[:img_src] %>" alt="Rover_Pic" height="300" width="300">
-</div>
+    <div class="nasa-picot-day">
+      <h2>Nasa Pic Of The Day</h2>
+      <h3>Title: <%= @nasa_p_title %></h3>
+      <img src="<%= @nasa_pic %>" alt="Nasa_Pic" height="200" width="200">
+      <h3>Date: <%= @nasa_p_date %></h3>
+      <h3>Description: <%= @nasa_p_explanation %></h3>
+    </div>
+      <div class="ui divider"></div>
+      <br>
+
+    <div class="current-notification">
+      <h2>Recent Notifications</h2>
+      <h3>Message Type: <%= @nasa_messg_type %> </h3>
+      <h3>Message ID: <%= @nasa_messg_id %></h3>
+      <h3>Message Issue Time: <%= @nasa_messg_time %></h3>
+      <h3>Notification: <%= @nasa_messg %></h3>
+      <h4>
+        Click <a href="<%= @nasa_messg_url %>">Here</a> for more info
+      </h4>
+    </div>
+      <div class="ui divider"></div>
+      <br>
+
+    <div class="rover-footage">
+      <h2>Rover Footage</h2>
+      <h3>Earth Date: <%= @rover_info[:earth_date] %></h3>
+      <h3>Rover Name: <%= @rover_info[:rover][:name] %></h3>
+      <img src="<%= @rover_info[:img_src] %>" alt="Rover_Pic" height="300" width="300">
+    </div>
+      <div class="ui divider"></div>
+      <br>
+  </body>
+</html>
