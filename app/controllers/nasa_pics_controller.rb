@@ -4,12 +4,19 @@ class NasaPicsController < ApplicationController
     @current_user = current_user
     @pic = NasaPic.create(parse_pic_info)
     if @pic.save
-      redirect_to users_path
       flash[:success] = "Your Pic Has Been Added"
+      redirect_to users_path
     else
       flash[:error] = "Not Added, Please try again"
       render root_path
     end
+  end
+
+  def destroy
+    @pic = NasaPic.find(params[:id])
+    @pic.save
+    flash[:success] = 'Picture Removed'
+    redirect_to users_path
   end
 
   def parse_pic_info

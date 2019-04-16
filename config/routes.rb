@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resource :users, only: [:show] do
-    resource :nasa_pics, only: [:create]
+    resource :nasa_pics, only: [:create, :destroy]
   end
 end
