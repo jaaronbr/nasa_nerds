@@ -1,0 +1,25 @@
+.root-page-title {
+  background: url("/images/space-stock-photo.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: fantasy;
+  color: white;
+}
+
+body h1 {
+  font-family: fantasy;
+  text-align: center;
+}
+
+body h2 {
+  font-family: fantasy;
+  text-align: center;
+}
+
+body h3 {
+  font-family: fantasy;
+}
+
+body h4 {
+  font-family: fantasy;
+  text-align: center;
+}
