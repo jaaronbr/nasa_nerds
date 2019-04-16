@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.nasa.gov/planetary/apod?api_key=co9KXj8GfYrF8VHAbjc0p4P9ztqjYy8q9LW9xJJD&date=2019-04-14&hd=bool
+    uri: https://api.nasa.gov/planetary/apod?api_key=<NASA_API_KEY>&date=2019-04-16&hd=bool
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sun, 14 Apr 2019 22:55:55 GMT
+      - Tue, 16 Apr 2019 16:52:15 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,7 +33,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '996'
+      - '998'
       Via:
       - 1.1 vegur, http/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
       Age:
@@ -46,25 +46,23 @@ http_interactions:
       - max-age=31536000; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"date":"2019-04-14","explanation":"Sit back and watch two black holes
-        merge. Inspired by the first direct detection of gravitational waves in 2015,
-        this simulation video plays in slow motion but would take about one third
-        of a second if run in real time. Set on a cosmic stage the black holes are
-        posed in front of stars, gas, and dust. Their extreme gravity lenses the light
-        from behind them into Einstein rings as they spiral closer and finally merge
-        into one. The otherwise invisible gravitational waves generated as the massive
-        objects rapidly coalesce cause the visible image to ripple and slosh both
-        inside and outside the Einstein rings even after the black holes have merged.
-        Dubbed GW150914, the gravitational waves detected by LIGO are consistent with
-        the merger of 36 and 31 solar mass black holes at a distance of 1.3 billion
-        light-years. The final, single black hole has 63 times the mass of the Sun,
-        with the remaining 3 solar masses converted into energy in gravitational waves.
-        Since then the LIGO and VIRGO gravitational wave observatories have reported
-        several more detections of merging massive systems, while last week the Event
-        Horizon Telescope reported the first horizon-scale image of a black hole.","media_type":"video","service_version":"v1","title":"Simulation:
-        Two Black Holes Merge","url":"https://www.youtube.com/embed/I_88S8DWbcU?rel=0"}
+      string: '{"copyright":"Utkarsh Mishra","date":"2019-04-16","explanation":"Strange
+        shapes and textures can be found in neighborhood of the Cone Nebula. The unusual
+        shapes originate from fine interstellar dust reacting in complex ways with
+        the energetic light and hot gas being expelled by the young stars.  The brightest
+        star on the right of the featured picture is S Mon, while the region just
+        below it has been nicknamed the Fox Fur Nebula for its color and structure.
+        The blue glow directly surrounding S Mon results from reflection, where neighboring
+        dust reflects light from the bright star. The red glow that encompasses the
+        whole region results not only from dust reflection but also emission from
+        hydrogen gas ionized by starlight. S Mon is part of a young open cluster of
+        stars named NGC 2264, located about 2500 light years away toward the constellation
+        of the Unicorn (Monoceros).   Even though it points right at S Mon, details
+        of the origin of the mysterious geometric Cone Nebula, visible on the far
+        left, remain a mystery.","hdurl":"https://apod.nasa.gov/apod/image/1904/ConeFoxfur_Mishra_1687.jpg","media_type":"image","service_version":"v1","title":"In
+        the Vicinity of the Cone Nebula","url":"https://apod.nasa.gov/apod/image/1904/ConeFoxfur_Mishra_960.jpg"}
 
 '
     http_version: 
-  recorded_at: Sun, 14 Apr 2019 22:55:56 GMT
+  recorded_at: Tue, 16 Apr 2019 16:52:15 GMT
 recorded_with: VCR 4.0.0

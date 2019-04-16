@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.nasa.gov/DONKI/notifications?api_key=<NASA_API_KEY>&endDate=2019-04-14&startDate=2019-03-14&type=report
+    uri: https://api.nasa.gov/DONKI/notifications?api_key=<NASA_API_KEY>&endDate=2019-04-16&startDate=2019-03-16&type=report
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 15 Apr 2019 01:00:59 GMT
+      - Tue, 16 Apr 2019 16:52:15 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -354,5 +354,5 @@ http_interactions:
         This \"Experimental Research Information\" consists of preliminary NASA research
         products and should be interpreted and used accordingly."}]'
     http_version: 
-  recorded_at: Mon, 15 Apr 2019 01:01:00 GMT
+  recorded_at: Tue, 16 Apr 2019 16:52:15 GMT
 recorded_with: VCR 4.0.0
