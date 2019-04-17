@@ -4,12 +4,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(first_name: params[:session][:first_name])
-    check_user(user)
+    if user = User.find_by(params[:id])
+      check_user(user)
+    else
+      user = User.create(parsed_user_info)
+      check_user(user)
+    end
   end
 
   def check_user(user)
-    if user && user.authenticate(params[:session][:password])
+    if user.id == nil
+      invalid_user
+    elsif user && user.authenticate(params[:password])
       valid_user(user)
     else
       invalid_user
@@ -18,7 +24,7 @@ class SessionsController < ApplicationController
 
   def valid_user(user)
     session[:user_id] = user.id
-    redirect_to dashboard_path
+    redirect_to root_path
   end
 
   def invalid_user
@@ -30,6 +36,19 @@ class SessionsController < ApplicationController
     session.clear
     redirect_to root_path
     flash[:success] = "You are now logged out"
+  end
+
+  private
+
+  def parsed_user_info
+    if params[:password] == params[:password_confirmation]
+      @new_user_info = {
+        first_name: params[:first_name],
+        last_name: params[:last_name],
+        password: params[:password],
+        confirmation: params[:password_confirmation]
+      }
+    end
   end
 
 end
