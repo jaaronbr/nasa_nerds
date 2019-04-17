@@ -28,4 +28,16 @@ describe 'As a Logged in User' do
     expect(page).to have_content('Date Taken')
     expect(page).to have_content('Date Saved')
   end
+
+  it 'can delete favorite from show page' do
+    user = User.create!(first_name: 'Billy', last_name: 'Johns', password: 'password')
+    user.nasa_pics.create!(title: "carmen", description: "12", image: "www.hey.com", date_taken: "today")
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit users_path(user)
+
+    click_link "Delete Favorite"
+
+    expect(current_path).to eq(users_path)
+  end
 end

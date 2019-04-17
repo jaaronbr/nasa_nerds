@@ -3,13 +3,13 @@ class UsersController < ApplicationController
 
   def create
     user = User.create(user_params)
-    user.save
-    
+    user.save ? user_valid(user) : user_not_valid(user)
+
   end
 
   def show
     @user = current_user
-    @current_pics = @user.nasa_pics
+    @current_pics = @user.nasa_pics if @user.nasa_pics
   end
 
   private

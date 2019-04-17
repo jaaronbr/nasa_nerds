@@ -14,7 +14,7 @@ class NasaPicsController < ApplicationController
 
   def destroy
     @pic = NasaPic.find(params[:id])
-    @pic.save
+    @pic.destroy
     flash[:success] = 'Picture Removed'
     redirect_to users_path
   end

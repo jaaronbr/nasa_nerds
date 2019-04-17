@@ -4,18 +4,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if user = User.find_by(params[:id])
-      check_user(user)
-    else
-      user = User.create(parsed_user_info)
-      check_user(user)
-    end
+    user = User.create(parsed_user_info)
+    check_user(user)
   end
 
   def check_user(user)
-    if user.id == nil
-      invalid_user
-    elsif user && user.authenticate(params[:password])
+    if user && user.authenticate(params[:password])
       valid_user(user)
     else
       invalid_user
