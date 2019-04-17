@@ -7,10 +7,4 @@ RSpec.describe NasaPic, type: :model do
     it { should validate_presence_of(:image) }
     it { should validate_presence_of(:date_taken) }
   end
-
-  describe 'instance methods' do
-  end
-
-  describe 'class methods' do
-  end
 end

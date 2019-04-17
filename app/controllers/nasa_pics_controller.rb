@@ -19,19 +19,19 @@ class NasaPicsController < ApplicationController
     redirect_to users_path
   end
 
-  def parse_pic_info
-    @updated_info = {
-        title: params["nasa_pic"]["title"],
-        description: params["nasa_pic"]["explanation"],
-        image: params["nasa_pic"]["url"],
-        date_taken: params["nasa_pic"]["date"],
-        user_id: params["user_id"]
-      }
-  end
-
   private
 
   def pic_params
     params.require(:nasa_pic).permit(:title, :description, :image, :date_taken)
+  end
+
+  def parse_pic_info
+    @updated_info = {
+      title: params["nasa_pic"]["title"],
+      description: params["nasa_pic"]["explanation"],
+      image: params["nasa_pic"]["url"],
+      date_taken: params["nasa_pic"]["date"],
+      user_id: params["user_id"]
+    }
   end
 end

@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 
   def create
     user = User.create(user_params)
-    user.save ? user_valid(user) : user_not_valid(user)
+    user.save
+    
   end
 
   def show
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
   def require_login
     unless current_user
       flash[:notice] = "You must be signed in to visit this page."
-      redirect_to '/'
+      redirect_to root_path
     end
   end
 end

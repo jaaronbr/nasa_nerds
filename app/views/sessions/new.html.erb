@@ -1,0 +1,29 @@
+<div class="form_container">
+  <h1>Login</h1>
+  <br><br>
+  <%= form_tag login_path do %>
+  <div>
+    <h2><%= label_tag :first_name %></h2>
+    <h2><%= text_field_tag :first_name %></h2>
+  </div>
+  <br>
+  <div>
+    <h2><%= label_tag :last_name %></h2>
+    <h2><%= text_field_tag :last_name %></h2>
+  </div>
+  <br>
+  <div>
+    <h2><%= label_tag :password %></h2>
+    <h2><%= password_field_tag :password %></h2>
+  </div>
+  <br>
+  <div>
+    <h2><%= label_tag :password_confirmation %></h2>
+    <h2><%= password_field_tag :password_confirmation %></h2>
+  </div>
+  <br>
+  <div>
+    <h2><%= submit_tag "Login" %></h2>
+  </div>
+  <% end %>
+</div>
