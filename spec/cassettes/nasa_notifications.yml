@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Tue, 16 Apr 2019 16:52:15 GMT
+      - Wed, 17 Apr 2019 03:20:36 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -33,7 +33,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '999'
+      - '147'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       - max-age=31536000; preload
@@ -354,5 +354,5 @@ http_interactions:
         This \"Experimental Research Information\" consists of preliminary NASA research
         products and should be interpreted and used accordingly."}]'
     http_version: 
-  recorded_at: Tue, 16 Apr 2019 16:52:15 GMT
+  recorded_at: Wed, 17 Apr 2019 03:20:36 GMT
 recorded_with: VCR 4.0.0
