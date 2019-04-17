@@ -9,7 +9,7 @@ describe "Nasa Service Model" do
 
   context 'instance methods' do
     context '#daily_apod' do
-      xit 'returns info from pic of the day' do
+      it 'returns info from pic of the day' do
         VCR.use_cassette("nasa_apod_service") do
           nasa = NasaService.new.daily_apod
 
@@ -24,7 +24,7 @@ describe "Nasa Service Model" do
     end
 
     context '#nasa_notifications' do
-      xit 'returns info from pic of the day' do
+      it 'returns info from pic of the day' do
         VCR.use_cassette("nasa_notifications") do
           notification = NasaService.new.nasa_notifications
 
@@ -39,7 +39,7 @@ describe "Nasa Service Model" do
     end
 
     context '#rover_photos' do
-      xit 'returns info from mars rovers' do
+      it 'returns info from mars rovers' do
         VCR.use_cassette("rover_photos") do
           rover = NasaService.new.rover_photos
 

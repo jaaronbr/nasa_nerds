@@ -8,6 +8,7 @@
       Description: <%= picture.description %>
       Date Taken: <%= picture.date_taken %>
       Date Saved: <%= picture.created_at %>
+      <%= link_to 'Delete Favorite', users_nasa_pics_path(id: picture.id), method: :delete %>
     <% end %>
   </body>
 </html>
